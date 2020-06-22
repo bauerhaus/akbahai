@@ -24,7 +24,7 @@ $settings['entity_update_backup'] = TRUE;
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 
-$settings['config_sync_directory'] = 'sites/default/files/config_G_Nk8z66uVBhyvUBzOodO0xP7fNYt667LAnsI74EAz7aPT9yrtvxsHDtikZ2lJNlfI4dN4N8Sg/sync';
+$settings['config_sync_directory'] = 'sites/default/sync';
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
    include $app_root . '/' . $site_path . '/settings.local.php';
