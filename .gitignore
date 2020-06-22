@@ -1,0 +1,36 @@
+
+# Because .gitignore can be specific to your site, this file has a different
+# name; updating Drupal core will not override your custom .gitignore file.
+
+# Ignore core when managing all of a project's dependencies with Composer
+# including Drupal core.
+# core
+
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+/vendor/
+
+# Ignore configuration files that may contain sensitive information.
+sites/default/settings.lcoal.php
+
+sites/default/development.services.yml
+
+# Ignore paths that contain user-generated content.
+sites/default/files
+sites/default/private
+
+# Ignore SimpleTest multi-site environment.
+sites/simpletest
+
+# If you prefer to store your .gitignore file in the sites/ folder, comment
+# or delete the previous settings and uncomment the following ones, instead.
+
+
+# Ignore paths that contain user-generated content.
+# */files
+# */private
+
+# Ignore SimpleTest multi-site environment.
+# simpletest

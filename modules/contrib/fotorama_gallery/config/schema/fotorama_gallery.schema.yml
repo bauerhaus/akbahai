@@ -1,0 +1,95 @@
+# Schema for configuration files of the Fotorama Gallery module.
+
+field.formatter.settings.fotorama_gallery:
+  type: mapping
+  label: 'Image field display format settings'
+  mapping:
+    image_link:
+      type: string
+      label: 'Link image to'
+    image_style:
+      type: string
+      label: 'Image style'
+    dimensions:
+      type: mapping
+      label: 'Dimensions'
+      mapping:
+        ratio:
+          type: string
+          label: 'data-ratio'
+        width:
+          type: string
+          label: 'data-width'
+        maxwidth:
+          type: string
+          label: 'data-maxwidth'
+        minwidth:
+          type: string
+          label: 'data-minwidth'
+        height:
+          type: string
+          label: 'data-height'
+        maxheight:
+          type: integer
+          label: 'data-maxheight'
+        minheight:
+          type: boolean
+          label: 'data-minheight'
+    others:
+      type: mapping
+      label: 'Others'
+      mapping:
+        fit:
+          type: integer
+          label: 'data-fit'
+        allowfullscreen:
+          type: integer
+          label: 'data-Allowfullscreen'
+        loop:
+          type: boolean
+          label: 'data-loop'
+        shuffle:
+          type: boolean
+          label: 'data-shuffle'
+        keyboard:
+          type: boolean
+          label: 'data-keyboard'
+        arrows:
+          type: integer
+          label: 'data-arrows'
+        click:
+          type: boolean
+          label: 'data-click'
+        swipe:
+          type: boolean
+          label: 'data-swipe'
+        trackpad:
+          type: boolean
+          label: 'data-trackpad'
+    autoplay:
+      type: mapping
+      label: 'Autoplay'
+      mapping:
+        stopautoplayontouch:
+          type: boolean
+          label: 'data-stopautoplayontouch'
+    navigation:
+      type: mapping
+      label: 'Navigation'
+      mapping:
+        nav:
+          type: integer
+          label: 'data-nav'
+        navposition:
+          type: integer
+          label: 'data-navposition'
+    transition:
+      type: mapping
+      label: 'Transition'
+      mapping:
+        transition:
+          type: integer
+          label: 'data-transition'
+        clicktransition:
+          type: boolean
+          label: 'data-clicktransition'
