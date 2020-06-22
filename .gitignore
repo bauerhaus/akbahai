@@ -13,7 +13,7 @@
 /vendor/
 
 # Ignore configuration files that may contain sensitive information.
-sites/default/settings.lcoal.php
+sites/default/settings.local.php
 
 sites/development.services.yml
 
