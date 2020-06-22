@@ -1,0 +1,18 @@
+uuid: 74a470f0-ff5f-48a6-a69f-a5aab34b7cc6
+langcode: en
+status: true
+dependencies: {  }
+id: development_config
+label: 'Development Config'
+description: 'This is for config that should only be on the dev site'
+folder: sites/default/devsync
+module:
+  admin_toolbar: 0
+  admin_toolbar_tools: 0
+  devel: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

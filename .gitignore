@@ -14,7 +14,7 @@
 
 # Ignore configuration files that may contain sensitive information.
 sites/default/settings.local.php
-
+sites/default/devsync/
 sites/development.services.yml
 
 # Ignore paths that contain user-generated content.
