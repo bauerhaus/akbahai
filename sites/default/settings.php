@@ -17,7 +17,6 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-/
 $settings['entity_update_batch_size'] = 50;
 
 
