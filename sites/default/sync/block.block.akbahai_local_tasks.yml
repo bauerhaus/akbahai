@@ -1,0 +1,22 @@
+uuid: ac99ee4e-a2f9-4688-bbb7-a03d429a445e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - akbahai
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: akbahai_local_tasks
+theme: akbahai
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

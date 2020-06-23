@@ -1,0 +1,23 @@
+uuid: 64ce9839-0e51-48ad-94c7-9cf35a5ba008
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.featured_items
+  module:
+    - text
+id: node.featured_items.body
+field_name: body
+entity_type: node
+bundle: featured_items
+label: 'Main Narative'
+description: 'Text area below slide show'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: true
+field_type: text_with_summary

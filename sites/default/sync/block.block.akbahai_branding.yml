@@ -1,0 +1,25 @@
+uuid: 5e27f3fc-bb2d-4121-b4a2-293efb405441
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - akbahai
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: akbahai_branding
+theme: akbahai
+region: branding
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

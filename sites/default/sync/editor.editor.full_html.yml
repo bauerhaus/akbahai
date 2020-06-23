@@ -20,10 +20,10 @@ settings:
             - Bold
             - Italic
             - Strike
-            - Superscript
-            - Subscript
+            - Underline
             - '-'
-            - RemoveFormat
+            - TextColor
+            - BGColor
         -
           name: Linking
           items:
@@ -37,6 +37,7 @@ settings:
         -
           name: Media
           items:
+            - quote
             - Blockquote
             - DrupalImage
             - Table
@@ -45,19 +46,32 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
+            - PasteFromWord
             - ShowBlocks
             - Source
+      -
+        -
+          name: Alignment
+          items:
+            - JustifyCenter
+            - JustifyBlock
+            - JustifyRight
   plugins:
+    language:
+      language_list: un
     stylescombo:
-      styles: ''
+      styles: 'blockquote.blockquote-reference|Blockquote Reference'
+    colorbutton:
+      colors: ''
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

@@ -1,0 +1,46 @@
+uuid: 50c29e9c-45f4-4019-b494-3023bd049a5f
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer users'
+  - 'create audio media'
+  - 'create document media'
+  - 'create featured_items content'
+  - 'create image media'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create url aliases'
+  - 'create video media'
+  - 'delete all revisions'
+  - 'delete any audio media'
+  - 'delete any document media'
+  - 'delete any featured_items content'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any remote_video media'
+  - 'delete any video media'
+  - 'delete featured_items revisions'
+  - 'edit any audio media'
+  - 'edit any document media'
+  - 'edit any featured_items content'
+  - 'edit any image media'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'revert all revisions'
+  - 'revert featured_items revisions'
+  - 'update any media'
+  - 'use advanced search'
+  - 'use text format full_html'
+  - 'view all media revisions'
+  - 'view featured_items revisions'
+  - 'view own unpublished media'

@@ -1,0 +1,74 @@
+uuid: 580db0c6-ff70-4b00-8c46-3b6a3b847269
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.featured_items.body
+    - field.field.node.featured_items.field_intro_paragraph
+    - field.field.node.featured_items.field_slide_show
+    - image.style.slide_show
+    - node.type.featured_items
+  module:
+    - fotorama_gallery
+    - text
+    - user
+id: node.featured_items.default
+targetEntityType: node
+bundle: featured_items
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_intro_paragraph:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_slide_show:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: slide_show
+      dimensions:
+        ratio: 16/9
+        width: 100%
+        maxwidth: ''
+        minwidth: ''
+        height: ''
+        maxheight: null
+        minheight: false
+      others:
+        fit: 0
+        allowfullscreen: 0
+        loop: true
+        shuffle: true
+        keyboard: true
+        arrows: 0
+        click: true
+        swipe: true
+        trackpad: true
+      autoplay:
+        stopautoplayontouch: true
+      navigation:
+        nav: 0
+        navposition: 0
+      transition:
+        transition: 1
+        clicktransition: true
+      image_link: ''
+    third_party_settings: {  }
+    type: fotorama_gallery
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

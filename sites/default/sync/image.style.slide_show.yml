@@ -1,0 +1,14 @@
+uuid: 43832296-4403-481b-b72d-74b80e207b97
+langcode: en
+status: true
+dependencies: {  }
+name: slide_show
+label: 'slide show'
+effects:
+  200a3655-176b-42bf-8647-46a6745a4929:
+    uuid: 200a3655-176b-42bf-8647-46a6745a4929
+    id: image_resize
+    weight: 1
+    data:
+      width: 960
+      height: 540

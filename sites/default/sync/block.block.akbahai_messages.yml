@@ -1,0 +1,22 @@
+uuid: a9e3a944-43aa-447f-843d-a6059e0388ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - akbahai
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: akbahai_messages
+theme: akbahai
+region: content
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

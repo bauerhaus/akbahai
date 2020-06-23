@@ -1,0 +1,18 @@
+uuid: 4c42eac1-c434-4176-8b04-add1b36a7a17
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Featured Items'
+type: featured_items
+description: 'This are main pages mostly what is linked from the top menu bar'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
