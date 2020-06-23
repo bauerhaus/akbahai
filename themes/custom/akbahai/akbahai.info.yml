@@ -1,0 +1,19 @@
+name: akbahai
+type: theme
+description: Drupal 9 subtheme of classy
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - akbahai/global-styling
+base theme: classy
+regions:
+  branding: Branding
+  navigation: Main navigation
+  search: Search
+  content: Content
+  left_sidebar: Left sidebar
+  right_sidebar: Right sidebar
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third
+  footer_bottom: Footer Bottom

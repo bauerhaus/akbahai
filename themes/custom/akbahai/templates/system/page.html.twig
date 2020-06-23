@@ -1,0 +1,34 @@
+<header aria-label="Site header" class="header" id="header" role="banner">
+      <div class="search">
+      {{ page.search }}
+      </div><!-- search -->
+      <div class="branding">
+      {{ page.branding }}
+      </div><!-- branding -->
+      <div class="main-nav">
+      {{ page.navigation }}
+      </div><!-- main-nav -->
+</header>
+
+<section class="main" id="main">
+   <aside class="left--sidebar" id="l-sidebar" role="complementary">
+     {{ page.left_sidebar }}
+   </aside>
+</section>
+   <main aria-label="Site main content" class="content" id="content" role="main">
+     {{ page.content }}
+   </main>
+   <aside class="right--sidebar" id="r-sidebar" role="complementary">
+     {{ page.right_sidebar }}
+   </aside>
+</section>
+<footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
+   <div class="footer--top">
+     {{ page.footer_first }}
+     {{ page.footer_second }}
+     {{ page.footer_third }}
+   </div>
+   <div class="footer--bottom">
+       {{ page.footer_bottom }}
+   </div>
+</footer>
