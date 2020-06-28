@@ -1,0 +1,9 @@
+uuid: 63f70a39-eb74-42f7-a81e-b63505a9a5b5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2at32KiJ2g0-DDGt07BnywB2CdAVdUwreRpYCoiSy2Q
+id: settings
+label: Settings
+settings: 'a:3:{s:13:"column_prefix";s:3:"col";s:17:"grid_column_count";s:2:"12";s:16:"frontend_library";s:6:"custom";}'
