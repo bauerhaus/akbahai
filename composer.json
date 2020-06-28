@@ -26,6 +26,7 @@
         "drupal/core-vendor-hardening": "^8.8",
         "drupal/ctools": "^3.4",
         "drupal/devel": "^2.1",
+        "drupal/diff": "^1.0",
         "drupal/ds": "^3.7",
         "drupal/fotorama_gallery": "^2.0",
         "drupal/imagefield_slideshow": "^1.10",
