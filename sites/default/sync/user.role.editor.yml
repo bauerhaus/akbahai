@@ -8,9 +8,9 @@ weight: 3
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access site in maintenance mode'
   - 'access site reports'
   - 'access taxonomy overview'
-  - 'access toolbar'
   - 'admin dynamic layouts'
   - 'administer users'
   - 'create audio media'
@@ -45,3 +45,4 @@ permissions:
   - 'view all media revisions'
   - 'view featured_items revisions'
   - 'view own unpublished media'
+  - 'view the administration theme'
