@@ -487,6 +487,7 @@ height:2em;
   height: auto;
 }
 .page-title{padding-left: 1em;}
+.clear-fix{ clear: both;}
 /* end of specific akbahai styles
    ==========================================================================
    ==========================================================================
@@ -509,7 +510,12 @@ height:2em;
     margin-top: 10px;
   }
 }
+/* Superfish hamburger menu (phones, 768px and down) */
+@media only screen and (max-width: 768px) {
+ #superfish-main-toggle{
 
+ }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .header .site-name a{
