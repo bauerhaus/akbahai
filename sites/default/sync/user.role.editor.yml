@@ -11,6 +11,7 @@ permissions:
   - 'access site reports'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'admin dynamic layouts'
   - 'administer users'
   - 'create audio media'
   - 'create document media'

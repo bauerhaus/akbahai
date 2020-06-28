@@ -349,6 +349,10 @@ template {
 [hidden] {
   display: none;
 }
+
+.right{float:right;}
+.left{float:left;}
+.center{text-align: center;}
 /* end of normalize
    ==========================================================================
    ==========================================================================
@@ -398,7 +402,7 @@ template {
 }
 
 
-.main.right--sidebar {
+.main .right--sidebar {
  flex: 0 1 30%;
 }
 
@@ -473,12 +477,27 @@ height:2em;
   .blockquote-reference::before{content: "&mdash; "}
   .fotorama {max-width: 100%;}
   .field--name-body {padding-left: 10px;padding-right: 10px;}
+.image-style-full-page-width-960{
+  width: 100%;
+  height: auto;
+}
+.path-frontpage .views-view-grid .views-col{padding:.5em;}
+.image-style-medium{
+  max-width: 100% !important;
+  height: auto;
+}
+.page-title{padding-left: 1em;}
 /* end of specific akbahai styles
    ==========================================================================
    ==========================================================================
    begin  @media changes
 */
-
+/* Extra small devices (phones, 500px and down) */
+@media only screen and (max-width: 500px) {
+  .path-frontpage .views-view-grid .views-col{
+    width:100% !important;
+  }
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .header .site-name a{
@@ -502,6 +521,9 @@ height:2em;
     height: 80px;
     line-height: 80px;
   }
+  .path-frontpage .views-view-grid .views-col{
+    width:45% !important;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -509,6 +531,9 @@ height:2em;
   .header .site-name a{
     font-weight: 500;
     font-size: 2em;
+  }
+  .path-frontpage .views-view-grid .views-col{
+    width:20% !important;
   }
 }
 
@@ -524,6 +549,7 @@ height:2em;
     float: right;
   }
   .field--name-body {padding-left: 0;padding-right:0;}
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -532,4 +558,4 @@ height:2em;
     font-weight: 600;
     font-size: 3em;
   }
-  .}
+  }

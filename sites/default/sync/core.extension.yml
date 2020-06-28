@@ -14,9 +14,11 @@ module:
   config_split: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
+  dynamic_layouts: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -27,7 +29,11 @@ module:
   help: 0
   history: 0
   image: 0
-  imagefield_slideshow: 0
+  jquery_ui: 0
+  jquery_ui_draggable: 0
+  jquery_ui_droppable: 0
+  layout_builder: 0
+  layout_discovery: 0
   link: 0
   media: 0
   media_library: 0

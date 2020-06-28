@@ -10,8 +10,103 @@ dependencies:
     - node.type.featured_items
   module:
     - fotorama_gallery
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b8953c61-e618-4129-b5dc-12e337c9afd9:
+            uuid: b8953c61-e618-4129-b5dc-12e337c9afd9
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:featured_items:links'
+            additional: {  }
+            weight: 0
+          1254e1c5-f727-4224-a63f-29f9f293ee02:
+            uuid: 1254e1c5-f727-4224-a63f-29f9f293ee02
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:featured_items:field_intro_paragraph'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 1
+          7e9ee8cf-84ca-4cad-a7df-f6e48d848a58:
+            uuid: 7e9ee8cf-84ca-4cad-a7df-f6e48d848a58
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:featured_items:field_slide_show'
+              formatter:
+                label: hidden
+                settings:
+                  image_style: slide_show
+                  dimensions:
+                    ratio: 16/9
+                    width: 100%
+                    maxwidth: ''
+                    minwidth: ''
+                    height: ''
+                    maxheight: null
+                    minheight: false
+                  others:
+                    fit: 0
+                    allowfullscreen: 0
+                    loop: true
+                    shuffle: true
+                    keyboard: true
+                    arrows: 0
+                    click: true
+                    swipe: true
+                    trackpad: true
+                  autoplay:
+                    stopautoplayontouch: true
+                  navigation:
+                    nav: 0
+                    navposition: 0
+                  transition:
+                    transition: 1
+                    clicktransition: true
+                  image_link: ''
+                third_party_settings: {  }
+                type: fotorama_gallery
+            additional: {  }
+            weight: 2
+          7116887f-b328-4454-97e5-52e82e365bf3:
+            uuid: 7116887f-b328-4454-97e5-52e82e365bf3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:featured_items:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
 id: node.featured_items.default
 targetEntityType: node
 bundle: featured_items

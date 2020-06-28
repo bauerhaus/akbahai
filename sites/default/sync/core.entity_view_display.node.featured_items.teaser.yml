@@ -9,8 +9,46 @@ dependencies:
     - field.field.node.featured_items.field_slide_show
     - node.type.featured_items
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          50c99ef7-1d8b-4635-b56b-72c5d3935b3a:
+            uuid: 50c99ef7-1d8b-4635-b56b-72c5d3935b3a
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:featured_items:links'
+            additional: {  }
+            weight: 0
+          0c007c3f-2980-4a6f-ba54-0522fb5bfdfe:
+            uuid: 0c007c3f-2980-4a6f-ba54-0522fb5bfdfe
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:featured_items:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
 id: node.featured_items.teaser
 targetEntityType: node
 bundle: featured_items
