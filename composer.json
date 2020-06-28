@@ -27,6 +27,7 @@
         "drupal/ctools": "^3.4",
         "drupal/devel": "^2.1",
         "drupal/ds": "^3.7",
+        "drupal/fotorama_gallery": "^2.0",
         "drupal/imagefield_slideshow": "^1.10",
         "drupal/responsive_menu": "^4.2",
         "drupal/superfish": "^1.4",
