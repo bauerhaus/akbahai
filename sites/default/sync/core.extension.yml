@@ -25,10 +25,10 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fotorama_gallery: 0
   help: 0
   history: 0
   image: 0
-  imagefield_slideshow: 0
   jquery_ui: 0
   jquery_ui_draggable: 0
   jquery_ui_droppable: 0
@@ -58,7 +58,6 @@ module:
   tour: 0
   update: 0
   user: 0
-  views_slideshow: 0
   views_ui: 0
   viewsreference: 0
   ds: 1
