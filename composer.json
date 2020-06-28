@@ -24,6 +24,7 @@
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
         "drupal/core-vendor-hardening": "^8.8",
+        "drupal/ctools": "^3.4",
         "drupal/devel": "^2.1",
         "drupal/ds": "^3.7",
         "drupal/imagefield_slideshow": "^1.10",
