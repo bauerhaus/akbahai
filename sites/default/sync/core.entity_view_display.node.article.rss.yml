@@ -10,29 +10,7 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
-    - layout_builder
-    - layout_discovery
     - user
-third_party_settings:
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          2d4ea844-b99a-4fde-ae9b-8eb9f1c76fce:
-            uuid: 2d4ea844-b99a-4fde-ae9b-8eb9f1c76fce
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:article:links'
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 _core:
   default_config_hash: 2rIr6K5Q0UQ9khg0zE_CK-PtJH76UL-BDDZcZnZzwCc
 id: node.article.rss

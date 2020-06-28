@@ -2,6 +2,8 @@ uuid: 828ac9fd-4435-4eeb-a69d-9c8da544c5ef
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   theme:
     - akbahai
 _core:
@@ -17,4 +19,13 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      featured_items: featured_items
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

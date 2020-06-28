@@ -9,35 +9,6 @@ dependencies:
     - media.type.document
   module:
     - image
-    - layout_builder
-    - layout_discovery
-third_party_settings:
-  layout_builder:
-    enabled: true
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          8d1e9143-b95d-40a2-96ee-00ba16bf2de0:
-            uuid: 8d1e9143-b95d-40a2-96ee-00ba16bf2de0
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:media:document:thumbnail'
-              formatter:
-                type: image
-                label: hidden
-                settings:
-                  image_style: thumbnail
-                  image_link: ''
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
 _core:
   default_config_hash: WA5PBCSll9OeXbS16GbGz8jNgz7vkUAmC_72nn0yyBo
 id: media.document.media_library

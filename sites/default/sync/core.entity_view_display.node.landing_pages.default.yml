@@ -4,10 +4,31 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_pages.body
+    - field.field.node.landing_pages.field_intro_paragraph
+    - field.field.node.landing_pages.field_landing_image
+    - field.field.node.landing_pages.field_what_we_do
     - node.type.landing_pages
   module:
+    - ds
     - text
     - user
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - links
+        - field_landing_image
+        - field_intro_paragraph
+        - body
+        - field_what_we_do
 id: node.landing_pages.default
 targetEntityType: node
 bundle: landing_pages
@@ -16,13 +37,38 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_intro_paragraph:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_landing_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: full_page_width_960
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_what_we_do:
+    weight: 4
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

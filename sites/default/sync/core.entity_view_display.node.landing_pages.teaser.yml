@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_pages.body
+    - field.field.node.landing_pages.field_intro_paragraph
+    - field.field.node.landing_pages.field_landing_image
+    - field.field.node.landing_pages.field_what_we_do
     - node.type.landing_pages
   module:
     - text
@@ -27,4 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_intro_paragraph: true
+  field_landing_image: true
+  field_what_we_do: true

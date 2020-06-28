@@ -1,0 +1,15 @@
+uuid: e5f05d36-72a0-4ab8-9ff0-ec91a8f389d8
+langcode: en
+status: true
+dependencies: {  }
+name: full_page_width_960
+label: 'Full page width 960'
+effects:
+  17c03cbc-83dc-480a-91b3-f3ff0f74f8e3:
+    uuid: 17c03cbc-83dc-480a-91b3-f3ff0f74f8e3
+    id: image_scale
+    weight: 1
+    data:
+      width: 960
+      height: null
+      upscale: false

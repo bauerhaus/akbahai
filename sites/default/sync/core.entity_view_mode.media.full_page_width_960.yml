@@ -1,0 +1,10 @@
+uuid: efdef39a-0638-431e-a655-e0367cf311fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full_page_width_960
+label: 'Full page width 960'
+targetEntityType: media
+cache: true

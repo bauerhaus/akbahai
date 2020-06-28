@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.featured_items.body
     - field.field.node.featured_items.field_intro_paragraph
     - field.field.node.featured_items.field_slide_show
+    - field.field.node.featured_items.field_teaser_image
     - image.style.thumbnail
     - node.type.featured_items
   module:
@@ -37,6 +38,14 @@ content:
     region: content
   field_slide_show:
     weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_teaser_image:
+    weight: 26
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail

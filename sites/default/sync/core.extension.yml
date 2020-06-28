@@ -18,7 +18,7 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
-  dynamic_layouts: 0
+  ds_switch_view_mode: 0
   dynamic_page_cache: 0
   editor: 0
   field: 0
@@ -32,7 +32,6 @@ module:
   jquery_ui: 0
   jquery_ui_draggable: 0
   jquery_ui_droppable: 0
-  layout_builder: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -50,6 +49,7 @@ module:
   responsive_image: 0
   search: 0
   shortcut: 0
+  superfish: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -59,6 +59,9 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  viewsreference: 0
+  ds: 1
+  ds_extras: 2
   views: 10
   standard: 1000
 theme:
