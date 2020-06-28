@@ -33,6 +33,7 @@
         "drupal/panels": "^4.6",
         "drupal/responsive_menu": "^4.2",
         "drupal/superfish": "^1.4",
+        "drupal/views_slideshow": "^4.7",
         "drupal/viewsreference": "^1.4",
         "drush/drush": "^10.2"
     },

@@ -427,9 +427,7 @@ template {
    ==========================================================================
    begin specific akbahai styles
 */
-a:visited {
-    color: #d7b221;
-}
+
 
 .header{}
 .header #block-akbahai-branding{}
@@ -448,12 +446,7 @@ a:visited {
 .search{width: 100%;
 height:2em;
 }
-  .site-name a:hover,
-  .site-name a:active,
-  .site-name a:focus,
-  .site-name a:visited{
-    color: #000000;
-  }
+
   #block-akbahai-search{
     position: absolute;
     right: 0px;
@@ -464,31 +457,81 @@ height:2em;
     clear:both;
   }
   blockquote{
-    font-size: 1.5em;
+    font-size: 1.1em;
     border-top: medium solid #d7b221;
     border-bottom:  medium solid #d7b221;
   }
   blockquote .author,
   .blockquote-reference{
     font-style: italic;
-    color:  #d7b221;
     font-size: .8em;
   }
+  blockquote .author::before{content: "~"}
   .blockquote-reference::before{content: "&mdash; "}
-  .fotorama {max-width: 100%;}
+  .imagefield_slideshow-wrapper img {max-width: 100%;}
   .field--name-body {padding-left: 10px;padding-right: 10px;}
 .image-style-full-page-width-960{
   width: 100%;
   height: auto;
 }
 .path-frontpage .views-view-grid .views-col{padding:.5em;}
-.image-style-medium{
+.image-style-featured-teaser{
   max-width: 100% !important;
   height: auto;
 }
 .page-title{padding-left: 1em;}
 .clear-fix{ clear: both;}
+.field--name-field-what-we-do{
+  text-align: center;
+  margin-top: .5em;
+}
+.featured-title-link{font-size: 1em;}
+.field--name-body p{
+  padding:.5em .5em .5em .5em;
+  margin:0;
+}
 /* end of specific akbahai styles
+   ==========================================================================
+   ==========================================================================
+   begin  akbahai color pallet
+*/
+.field--name-field-what-we-do{
+  color:#424874;
+}
+blockquote .author a:hover,
+blockquote .author a:active,
+blockquote .author a:focus,
+blockquote .author a:visited,
+blockquote .author
+{
+  color:  #d7b221;
+}
+
+.site-name a:hover,
+.site-name a:active,
+.site-name a:focus,
+.site-name a:visited{
+  color: #000000;
+}
+body{
+  background-color: #f4eeff;
+}
+.main-nav{
+  background-color: #bdd2ff;
+}
+.field--name-body{
+  background-color: #424874;
+  color:white;
+}
+.field--name-body a,
+.field--name-body a:hover,
+.field--name-body a:active,
+.field--name-body a:focus,
+.field--name-body a:visited{
+  color: #DCD6F7;
+}
+
+/* end of  akbahai color pallet
    ==========================================================================
    ==========================================================================
    begin  @media changes
@@ -539,7 +582,7 @@ height:2em;
     font-size: 2em;
   }
   .path-frontpage .views-view-grid .views-col{
-    width:20% !important;
+    width:23% !important;
   }
 }
 
