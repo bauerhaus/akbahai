@@ -30,6 +30,7 @@
         "drupal/fotorama_gallery": "^2.0",
         "drupal/imagefield_slideshow": "^1.10",
         "drupal/jquery_ui": "^1.4",
+        "drupal/jquery_ui_draggable": "^1.2",
         "drupal/responsive_menu": "^4.2",
         "drupal/superfish": "^1.4",
         "drupal/viewsreference": "^1.4",
