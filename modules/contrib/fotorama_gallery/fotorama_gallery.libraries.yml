@@ -1,8 +1,0 @@
-fotorama:
-  css:
-    component:
-      /libraries/fotorama/fotorama.css: {minified: true }
-  js:
-    /libraries/fotorama/fotorama.js: {minified: true }
-  dependencies:
-    - core/jquery
