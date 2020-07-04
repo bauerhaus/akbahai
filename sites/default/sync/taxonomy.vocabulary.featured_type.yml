@@ -1,0 +1,8 @@
+uuid: f85274fe-0d14-49e2-8255-4b49dda220e9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Featured type'
+vid: featured_type
+description: 'A method to sort featured items into different groups'
+weight: 0

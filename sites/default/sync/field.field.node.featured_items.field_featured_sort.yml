@@ -1,0 +1,29 @@
+uuid: 813912e0-a9a9-4eba-8d53-d8ddc3db06f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_sort
+    - node.type.featured_items
+    - taxonomy.vocabulary.featured_type
+id: node.featured_items.field_featured_sort
+field_name: field_featured_sort
+entity_type: node
+bundle: featured_items
+label: 'Featured Sort'
+description: 'This selector will determine which grouping the story will in for front page promotion. leaving it blank will leave it off the front page'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      featured_type: featured_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

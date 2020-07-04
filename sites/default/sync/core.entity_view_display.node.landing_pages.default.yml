@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_pages.body
+    - field.field.node.landing_pages.field_fp_teasers_bottom
+    - field.field.node.landing_pages.field_fp_teasers_top
     - field.field.node.landing_pages.field_intro_paragraph
     - field.field.node.landing_pages.field_landing_image
-    - field.field.node.landing_pages.field_what_we_do
     - node.type.landing_pages
   module:
     - ds
@@ -27,8 +28,9 @@ third_party_settings:
         - links
         - field_landing_image
         - field_intro_paragraph
+        - field_fp_teasers_top
         - body
-        - field_what_we_do
+        - field_fp_teasers_bottom
 id: node.landing_pages.default
 targetEntityType: node
 bundle: landing_pages
@@ -37,9 +39,27 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_fp_teasers_bottom:
+    type: viewsreference_formatter
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+  field_fp_teasers_top:
+    weight: 3
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
     region: content
   field_intro_paragraph:
     weight: 2
@@ -56,15 +76,6 @@ content:
       view_mode: full_page_width_960
       link: false
     third_party_settings: {  }
-    region: content
-  field_what_we_do:
-    weight: 4
-    label: above
-    settings:
-      plugin_types:
-        - block
-    third_party_settings: {  }
-    type: viewsreference_formatter
     region: content
   links:
     weight: 0

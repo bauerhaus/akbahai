@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.featured_items.body
+    - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
     - field.field.node.featured_items.field_slide_show
+    - field.field.node.featured_items.field_subtitle
     - field.field.node.featured_items.field_teaser_image
     - image.style.featured_teaser
     - node.type.featured_items
@@ -34,22 +36,20 @@ third_party_settings:
     regions:
       ds_content:
         - field_teaser_image
-        - node_title
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 1
-        label: hidden
-        formatter: default
-        settings:
-          link: true
-          wrapper: h2
-          class: featured-title-link
+        - field_subtitle
 id: node.featured_items.teaser
 targetEntityType: node
 bundle: featured_items
 mode: teaser
 content:
+  field_subtitle:
+    type: string
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
   field_teaser_image:
     type: image
     weight: 0
@@ -61,6 +61,7 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_featured_sort: true
   field_intro_paragraph: true
   field_slide_show: true
   links: true

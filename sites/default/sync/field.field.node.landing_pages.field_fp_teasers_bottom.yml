@@ -1,17 +1,17 @@
-uuid: baa9e8f1-c874-40a5-8f89-cd58505967a8
+uuid: e191cdae-94f1-4a67-a686-1514ab6daef4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_what_we_do
+    - field.storage.node.field_fp_teasers_bottom
     - node.type.landing_pages
   module:
     - viewsreference
-id: node.landing_pages.field_what_we_do
-field_name: field_what_we_do
+id: node.landing_pages.field_fp_teasers_bottom
+field_name: field_fp_teasers_bottom
 entity_type: node
 bundle: landing_pages
-label: 'What we do'
+label: 'FP Teasers Bottom'
 description: ''
 required: false
 translatable: false

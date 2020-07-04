@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.featured_items.body
+    - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
     - field.field.node.featured_items.field_slide_show
+    - field.field.node.featured_items.field_subtitle
     - field.field.node.featured_items.field_teaser_image
     - node.type.featured_items
   module:
@@ -54,4 +56,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_featured_sort: true
+  field_subtitle: true
   field_teaser_image: true

@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_pages.body
+    - field.field.node.landing_pages.field_fp_teasers_bottom
+    - field.field.node.landing_pages.field_fp_teasers_top
     - field.field.node.landing_pages.field_intro_paragraph
     - field.field.node.landing_pages.field_landing_image
-    - field.field.node.landing_pages.field_what_we_do
     - node.type.landing_pages
   module:
     - media_library
@@ -34,6 +35,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_fp_teasers_bottom:
+    weight: 125
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_fp_teasers_top:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
   field_intro_paragraph:
     weight: 123
     settings:
@@ -48,16 +69,6 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
-  field_what_we_do:
-    weight: 124
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: viewsreference_autocomplete
     region: content
   path:
     type: path

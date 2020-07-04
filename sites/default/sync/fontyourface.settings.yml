@@ -1,0 +1,5 @@
+enabled_fonts:
+  - 'https://www.google.com/webfonts/family?family=Marck Script&subset=latin#regular'
+load_all_enabled_fonts: 1
+_core:
+  default_config_hash: r8uAx4mTBwCkgDFbdKCmhjgbb91BQ4HbWSYRKrlowMY

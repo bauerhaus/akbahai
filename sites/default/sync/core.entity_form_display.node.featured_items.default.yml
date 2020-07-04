@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.featured_items.body
+    - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
     - field.field.node.featured_items.field_slide_show
+    - field.field.node.featured_items.field_subtitle
     - field.field.node.featured_items.field_teaser_image
     - image.style.thumbnail
     - node.type.featured_items
@@ -28,6 +30,12 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
+  field_featured_sort:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_intro_paragraph:
     weight: 1
     settings:
@@ -43,6 +51,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_subtitle:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   field_teaser_image:
     weight: 26

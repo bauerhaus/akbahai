@@ -1,18 +1,18 @@
-uuid: 30da69af-de84-4adc-a2c2-55d7e901a30f
+uuid: 8993e884-bc48-4693-ad0f-0d177965e924
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - views
-    - viewsreference
-id: node.field_what_we_do
-field_name: field_what_we_do
+id: node.field_subtitle
+field_name: field_subtitle
 entity_type: node
-type: viewsreference
+type: string
 settings:
-  target_type: view
-module: viewsreference
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

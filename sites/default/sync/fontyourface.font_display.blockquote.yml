@@ -1,0 +1,10 @@
+uuid: 5b63dc71-1b3d-4639-a040-27c38e237303
+langcode: en
+status: true
+dependencies: {  }
+id: blockquote
+label: blockquote
+font_url: 'https://www.google.com/webfonts/family?family=Marck Script&subset=latin#regular'
+fallback: arial
+selectors: blockquote
+theme: akbahai
