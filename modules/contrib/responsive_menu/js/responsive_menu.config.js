@@ -58,7 +58,26 @@
         }
 
         // Set up the off canvas menu.
-        new Mmenu('#off-canvas', options, config);
+        const mmenu = new Mmenu('#off-canvas', options, config);
+
+        // Due to a rendering issue with Chrome the page needs the viewport
+        // metatag to have a value including initial-scale=1.0 otherwise it
+        // won't render properly.
+        // @see issue #3153145
+        const mmenuApi = mmenu.API;
+        const viewports = document.getElementsByName('viewport');
+        if (viewports.length !== 0 && settings.modifyViewport) {
+          const viewportMeta = viewports[0]
+          const defaultViewport = viewports[0].content
+          const staticViewport = "width=device-width, initial-scale=1.0, minimum-scale=1.0";
+
+          mmenuApi.bind('open:start', function() {
+            viewportMeta.setAttribute('content', staticViewport);
+          });
+          mmenuApi.bind('close:start', function() {
+            viewportMeta.setAttribute('content', defaultViewport);
+          });
+        }
       }
     }
   };

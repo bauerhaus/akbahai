@@ -110,6 +110,16 @@ function responsive_menu_update_84002() {
 }
 
 /**
+ * Add new config to dynamically modify the viewport to fix Chrome bug.
+ */
+function responsive_menu_update_84300() {
+  \Drupal::configFactory()
+    ->getEditable('responsive_menu.settings')
+    ->set('modify_viewport', TRUE)
+    ->save(TRUE);
+}
+
+/**
  * Implements hook_requirements().
  */
 function responsive_menu_requirements($phase) {

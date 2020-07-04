@@ -159,6 +159,7 @@ function responsive_menu_page_bottom(&$page) {
     'position' => $config->get('off_canvas_position'),
     'theme' => $config->get('off_canvas_theme'),
     'pagedim' => $config->get('pagedim'),
+    'modifyViewport' => $config->get('modify_viewport'),
     'breakpoint' => $config->get('horizontal_media_query'),
     'superfish' => [
       'active' => $config->get('horizontal_superfish'),
