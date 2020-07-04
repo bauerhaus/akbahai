@@ -17,6 +17,7 @@
     "require": {
         "composer/installers": "^1.2",
         "drupal/admin_toolbar": "^2.2",
+        "drupal/asset_injector": "^2.7",
         "drupal/ckeditor_quote": "^1.0",
         "drupal/colorbutton": "^1.2",
         "drupal/config_split": "^1.4",
@@ -28,6 +29,7 @@
         "drupal/devel": "^2.1",
         "drupal/diff": "^1.0",
         "drupal/ds": "^3.7",
+        "drupal/fontyourface": "^3.2",
         "drupal/fotorama_gallery": "^2.0",
         "drupal/imagefield_slideshow": "^1.10",
         "drupal/jquery_ui": "^1.4",

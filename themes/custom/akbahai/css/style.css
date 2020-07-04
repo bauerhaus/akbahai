@@ -456,16 +456,52 @@ height:2em;
   .main-nav{
     clear:both;
   }
+
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
   blockquote{
-    font-size: 1.1em;
-    border-top: medium solid #d7b221;
-    border-bottom:  medium solid #d7b221;
+    font-size: 1.2em;
+    width:60%;
+    margin:50px auto;
+
+    color: #555555;
+    padding-left: 2em;
+    border-left:.4rem solid #424874;
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    line-height:1.6;
+    position: relative;
+
+    background-image: linear-gradient(to right, #EDEDED, #f4eeff);
   }
-  blockquote .author,
+
+  blockquote::before{
+    font-family:Arial;
+    content: "\201C";
+    color:#424874;;
+    font-size:4em;
+    position: absolute;
+    left: 10px;
+    top:-10px;
+  }
+
+  blockquote::after{
+    content: '';
+  }
+
+  blockquote span{
+    display:block;
+    color:#333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top:1em;
+  }
+  .field--name-field-intro-paragraph blockquote .author,
   .blockquote-reference{
     font-style: italic;
     font-size: .8em;
+    color: #424874;
   }
+
   blockquote .author::before{content: "~"}
   .blockquote-reference::before{content: "&mdash; "}
   .imagefield_slideshow-wrapper img {max-width: 100%;}
@@ -473,6 +509,11 @@ height:2em;
 .image-style-full-page-width-960{
   width: 100%;
   height: auto;
+}
+
+.field--name-field-intro-paragraph blockquote:before {
+}
+.field--name-field-intro-paragraph blockquote:after {
 }
 .path-frontpage .views-view-grid .views-col{padding:.5em;}
 .image-style-featured-teaser{
@@ -520,15 +561,19 @@ body{
   background-color: #bdd2ff;
 }
 .field--name-body{
-  background-color: #424874;
-  color:white;
+  background-color: #dcd6f7;
+  color:#424874;
+  line-height: 1.5;
+  font-size: 1.1em;
+  padding:.8em;
 }
 .field--name-body a,
 .field--name-body a:hover,
 .field--name-body a:active,
 .field--name-body a:focus,
 .field--name-body a:visited{
-  color: #DCD6F7;
+  color: #424874;
+  text-decoration: underline;
 }
 
 /* end of  akbahai color pallet
