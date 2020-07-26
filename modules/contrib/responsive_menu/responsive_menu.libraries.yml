@@ -38,6 +38,16 @@ responsive_menu.superfish_hoverintent:
   dependencies:
     - responsive_menu/responsive_menu.superfish
 
+responsive_menu.bootstrap:
+  version: VERSION
+  js:
+    js/responsive_menu.bootstrap.js: {}
+  css:
+    theme:
+      /libraries/mmenu/dist/wrappers/bootstrap/mmenu.bootstrap.css: {}
+  dependencies:
+    - responsive_menu/responsive_menu.config
+
 responsive_menu.polyfills:
   version: VERSION
   js:

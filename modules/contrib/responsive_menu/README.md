@@ -114,6 +114,39 @@ optional superfish library (and the included hoverintent) do require jQuery so
 if you want to use those your theme will need to include jQuery (jQuery will be
 automatically added by the module as a dependency in this situation).
 
+## Bootstrap compatibility
+
+Since version 4.3.1 this module supports Bootstrap 4 themes. It has been tested
+with the Varbase distribution which uses `bootstrap_barrio` as the base theme for
+the front end. It has not been tested with Bootstrap 3 themes and there will be
+no support for Boostrap 3 as it has been superceded by Bootstrap 4.
+
+By default the collapsible navbar provided by Bootstrap 4's
+[navbar component](https://getbootstrap.com/docs/4.0/components/navbar/) and
+`bootstrap_barrio` theme is a horizontal navbar that at narrower browser widths
+provides a menu 'burger' icon which opens a vertical mobile-friendly menu.
+Instead of opening that mobile-friendly Bootstrap menu we can open the
+off-canvas mmenu provided by this module and the mmenu library.
+
+To use the Bootstrap navbar element and have the menu 'burger' icon open the
+off-canvas mmenu instead of the default Bootstrap mobile menu, you need two
+things:
+1. Enable the new setting labeled "Enable compatibility mode for Bootstrap 4 themes".
+2. Make sure the "Main navigation" block is placed in the "Navigation
+   (Collapsible)" region of your theme.
+
+In case you have customised any templates and changed anything, for the
+JavaScript to correctly override the menu icon it needs to find the menu icon
+within a wrapper with the ID `#navbar-main`. This is the default for
+`bootstrap_barrio`.
+
+You don't need to place this module's horizontal menu block or enable superfish
+when you are using the Bootstrap navbar. If you don't want to use the Bootstrap
+navbar you can instead use this module's horizontal menu block and place it in
+the "Navigation" region, along with this module's "Responsive menu mobile icon"
+block. You won't need to have the Bootstrap compatibility setting enabled either
+as this is only for the navbar component.
+
 # Customising the mmenu config and settings (advanced)
 
 It is possible to completely customise the config provided to the mmenu library,

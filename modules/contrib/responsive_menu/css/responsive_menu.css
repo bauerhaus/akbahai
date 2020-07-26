@@ -1,3 +1,8 @@
+body.user-logged-in.toolbar-fixed.mm-wrapper_opening,
+body.user-logged-in.toolbar-fixed.mm-wrapper_opened {
+  padding-top: 0!important;
+}
+
 .responsive-menu-block-wrapper {
   display: none;
 }

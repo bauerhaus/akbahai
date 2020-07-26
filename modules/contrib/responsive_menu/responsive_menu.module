@@ -154,12 +154,18 @@ function responsive_menu_page_bottom(&$page) {
     $output['#attached']['library'][] = 'responsive_menu/responsive_menu.styling';
   }
 
+  // Add the bootstrap specific code if needed.
+  if ($config->get('use_bootstrap')) {
+    $output['#attached']['library'][] = 'responsive_menu/responsive_menu.bootstrap';
+  }
+
   // Add some of the config as javascript settings.
   $output['#attached']['drupalSettings']['responsive_menu'] = [
     'position' => $config->get('off_canvas_position'),
     'theme' => $config->get('off_canvas_theme'),
     'pagedim' => $config->get('pagedim'),
     'modifyViewport' => $config->get('modify_viewport'),
+    'use_bootstrap' => $config->get('use_bootstrap'),
     'breakpoint' => $config->get('horizontal_media_query'),
     'superfish' => [
       'active' => $config->get('horizontal_superfish'),

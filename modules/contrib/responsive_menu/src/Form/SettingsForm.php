@@ -174,6 +174,12 @@ class SettingsForm extends ConfigFormBase {
       '#type' => 'fieldset',
       '#title' => 'Theme compatiblity',
     ];
+    $form['responsive_menu']['theme_compatibility']['use_bootstrap'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Enable compatibility mode for Bootstrap 4 themes'),
+      '#description' => $this->t("Enabling this setting will override the Bootstrap 4 navbar menu icon so that it opens the off-canvas menu at the desired breakpoint instead of the Bootstrap navbar mobile menu. This will only work if the Bootstrap menu icon is within an element with the css ID #navbar-main, which is the default if using bootstrap_bario theme. See the README.md for more detail."),
+      '#default_value' => $this->config->get('use_bootstrap'),
+    ];
     // Whether to add a theme wrapper for the front end theme.
     $form['responsive_menu']['theme_compatibility']['wrapper_theme'] = [
       '#type' => 'checkbox',
@@ -328,6 +334,7 @@ class SettingsForm extends ConfigFormBase {
       ->set('use_breakpoint', $values['use_breakpoint'])
       ->set('include_css', $values['css'])
       ->set('allow_admin', $values['allow_admin'])
+      ->set('use_bootstrap', $values['use_bootstrap'])
       ->set('wrapper_admin', $values['wrapper_admin'])
       ->set('wrapper_theme', $values['wrapper_theme'])
       ->set('use_polyfills', $values['use_polyfills'])
@@ -383,6 +390,9 @@ class SettingsForm extends ConfigFormBase {
    *
    * @return array
    *   Keys are menu names (ids) values are the menu labels.
+   *
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    * @noinspection PhpFullyQualifiedNameUsageInspection
    */
   protected function getMenuOptions(array $menu_names = NULL) {
