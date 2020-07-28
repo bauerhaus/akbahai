@@ -39,7 +39,7 @@
         "drupal/superfish": "^1.4",
         "drupal/views_slideshow": "^4.7",
         "drupal/viewsreference": "^1.4",
-        "drush/drush": "^10.2"
+        "drush/drush": "^10.3"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8"

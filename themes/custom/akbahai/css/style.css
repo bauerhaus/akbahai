@@ -456,8 +456,7 @@ height:2em;
   .main-nav{
     clear:both;
   }
-
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+/*
   blockquote{
     font-size: 1.2em;
     width:60%;
@@ -473,21 +472,40 @@ height:2em;
 
     background-image: linear-gradient(to right, #EDEDED, #f4eeff);
   }
-
-  blockquote::before{
+*/
+blockquote { quotes: '\201c' '\201d'; }
+blockquote>p:before { content: open-quote; font-size: 1.3em; }
+blockquote>p:after  { content: close-quote; font-size: 1.3em;}
+blockquote{
+  font-size: 1.2em;
+  width:60%;
+  margin:50px auto;
+  color: #555555;
+  padding-left: 2em;
+  line-height:1.6;
+  position: relative;
+}
+/*
+  blockquote>p::before{
     font-family:Arial;
     content: "\201C";
     color:#424874;;
-    font-size:4em;
+    font-size:2em;
     position: absolute;
-    left: 10px;
-    top:-10px;
+    left:.5em;
+    top:-.2em;
   }
 
-  blockquote::after{
-    content: '';
-  }
+  blockquote>p::after{
+      font-family:Arial;
+      content: "\201D";
+      color:#424874;;
+      font-size:2em;
+      position: absolute;
+      bottom:.6em;
 
+  }
+*/
   blockquote span{
     display:block;
     color:#333333;
@@ -514,6 +532,12 @@ height:2em;
 .field--name-field-intro-paragraph blockquote:before {
 }
 .field--name-field-intro-paragraph blockquote:after {
+}
+blockquote>p {
+ font-family: 'Charm', Arial !important;
+ font-style: normal;
+ font-weight: normal;
+ color:#424874;
 }
 .path-frontpage .views-view-grid .views-col{padding:.5em;}
 .image-style-featured-teaser{
@@ -557,9 +581,7 @@ blockquote .author
 body{
   background-color: #f4eeff;
 }
-.main-nav{
-  background-color: #bdd2ff;
-}
+
 .field--name-body{
   background-color: #dcd6f7;
   color:#424874;
@@ -575,7 +597,25 @@ body{
   color: #424874;
   text-decoration: underline;
 }
-
+/* superfish nav style colors */
+.main-nav{
+  background-color: #f4eeff;
+}
+#superfish-main li a {
+  color:#000;
+}
+ul.sf-menu a, ul.sf-menu span.nolink{
+  padding:.5em 1em;
+  text-decoration: none;
+}
+.field--name-field-subtitle a{
+  color:#423874;
+  text-decoration: none;
+}
+.field--name-field-subtitle,
+.path-frontpage .field--name-body h1{
+  text-align: center;
+}
 /* end of  akbahai color pallet
    ==========================================================================
    ==========================================================================
