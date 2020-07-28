@@ -1,0 +1,10 @@
+uuid: aac39786-9e68-429b-853c-e708a8bb145e
+langcode: en
+status: true
+dependencies: {  }
+id: archivo_600_bold_headings
+label: 'Archivo 600 bold headings'
+font_url: 'https://www.google.com/webfonts/family?family=Archivo&subset=latin#600'
+fallback: Arial
+selectors: '.fontyourface h1, .fontyourface h2, .fontyourface h3, .fontyourface h4, .fontyourface h5, .fontyourface h6'
+theme: akbahai

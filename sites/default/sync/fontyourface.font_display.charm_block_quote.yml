@@ -1,0 +1,10 @@
+uuid: d3398587-2e0b-4f6d-a339-e85804013d7e
+langcode: en
+status: true
+dependencies: {  }
+id: charm_block_quote
+label: 'Charm Block quote'
+font_url: 'https://www.google.com/webfonts/family?family=Charm&subset=latin#regular'
+fallback: Arial
+selectors: blockquote>p
+theme: akbahai

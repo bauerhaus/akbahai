@@ -1,0 +1,10 @@
+uuid: 12dfe7ff-2b80-47d8-9384-c12483f3e3de
+langcode: en
+status: true
+dependencies: {  }
+id: archivo_normal
+label: 'Archivo normal'
+font_url: 'https://www.google.com/webfonts/family?family=Archivo&subset=latin#regular'
+fallback: Arial
+selectors: '.fontyourface p, .fontyourface div'
+theme: akbahai
