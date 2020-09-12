@@ -108,6 +108,10 @@ class HorizontalMenu extends BlockBase implements ContainerFactoryPluginInterfac
       // Use the default sorting of menu links.
       ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
     ];
+
+    // Allow other modules to alter manipulators before transforming menu tree.
+    $this->moduleHandler->alter('responsive_menu_horizontal_manipulators', $manipulators);
+
     $tree = $menu_tree->transform($tree, $manipulators);
     $menu = $menu_tree->build($tree);
 
@@ -125,6 +129,13 @@ class HorizontalMenu extends BlockBase implements ContainerFactoryPluginInterfac
     $superfish_setting = $this->config->get('horizontal_superfish');
     if ($superfish_setting) {
       $output['#attached']['library'][] = 'responsive_menu/responsive_menu.superfish';
+      // Add some of the config as javascript settings.
+      $output['#attached']['drupalSettings']['responsive_menu']['superfish'] = [
+        'active' => $this->config->get('horizontal_superfish'),
+        'delay' => $this->config->get('horizontal_superfish_delay'),
+        'speed' => $this->config->get('horizontal_superfish_speed'),
+        'speedOut' => $this->config->get('horizontal_superfish_speed_out'),
+      ];
     }
 
     // Add superfish's hoverIntent library if the user has requested it.

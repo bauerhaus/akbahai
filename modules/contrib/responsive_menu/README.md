@@ -180,6 +180,42 @@ function MYTHEME_preprocess_page(&$variables) {
 }
 ```
 
+# Disabling the off-canvas menu under specific conditions
+
+In rare cases you may not want the off-canvas menu to be rendered, for example
+you may have a members section of the site which uses a different menu system
+and theme. To stop the off-canvas menu from being added to the DOM and to
+disable the JavaScript you can use a hook in a custom module. Change `MYMODULE`
+to the machine name of your module and place this code in your custom module's
+`.module` file:
+
+```php
+/**
+ * Implements hook_responsive_menu_off_canvas_output_alter().
+ */
+function MYMODULE_responsive_menu_off_canvas_output_alter(&$output) {
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() === 'bartik') {
+    $output = FALSE;
+  }
+}
+
+```
+
+You will want to change the logic in the example above to trigger only when your
+specific condition has been met. This might be checking the theme name, if the
+user is logged in, if the user is visiting a certain page etc.
+
+Note that disabling the module's output of the `page_bottom` region code will
+also disable the included css (if enabled) that might be needed for the
+horizontal menu. You should disable the included css (see settings page) and
+instead maintain your own css in your theme(s). The breakpoints css will also
+not be included, so again it is up to the developer to maintain their own
+breakpoint code.
+
+The idea of this hook is to disable all custom output in that region, it is up
+to the site builder to decide how they will manage their menus in that
+situation.
+
 # Licenses
 
 The licenses for the libraries used by this module are:

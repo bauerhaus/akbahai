@@ -2,10 +2,12 @@
 
 namespace Drupal\fontyourface\Controller;
 
+use Drupal;
 use Drupal\Core\Url;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Link;
 use Drupal\fontyourface\Entity\Font;
 
 /**
@@ -21,15 +23,22 @@ class FontYourFaceController extends ControllerBase {
       $font->activate();
       if ($js == 'ajax') {
         $url = Url::fromRoute('entity.font.deactivate', ['js' => 'nojs', 'font' => $font->id()], ['query' => \Drupal::destination()->getAsArray()]);
-        $url->setOptions(['attributes' => ['id' => 'font-status-' . $font->id(), 'class' => ['font-status', 'enabled', 'use-ajax']]]);
+        $url->setOptions(
+          [
+            'attributes' => [
+              'id' => 'font-status-' . $font->id(),
+              'class' => ['font-status', 'enabled', 'use-ajax'],
+            ],
+          ]
+        );
         $text = $this->t('Enable');
-        $link = \Drupal::l($text, $url);
+        $link = Link::fromTextAndUrl($text, $url)->toString();
 
         $response = new AjaxResponse();
         return $response->addCommand(new ReplaceCommand('#font-status-' . $font->id(), $link));
       }
       else {
-        drupal_set_message($this->t('Font @font successfully enabled', ['@font' => $font->name->value]));
+        Drupal::messenger()->addMessage($this->t('Font @font successfully enabled', ['@font' => $font->name->value]));
         return $this->redirect('entity.font.collection');
       }
     }
@@ -42,7 +51,7 @@ class FontYourFaceController extends ControllerBase {
         ], 503);
       }
       else {
-        drupal_set_message($error, 'error');
+        Drupal::messenger()->addMessage($error, 'error');
         return $this->redirect('entity.font.collection');
       }
     }
@@ -56,15 +65,22 @@ class FontYourFaceController extends ControllerBase {
       $font->deactivate();
       if ($js == 'ajax') {
         $url = Url::fromRoute('entity.font.activate', ['js' => 'nojs', 'font' => $font->id()], ['query' => \Drupal::destination()->getAsArray()]);
-        $url->setOptions(['attributes' => ['id' => 'font-status-' . $font->id(), 'class' => ['font-status', 'disabled', 'use-ajax']]]);
+        $url->setOptions(
+          [
+            'attributes' => [
+              'id' => 'font-status-' . $font->id(),
+              'class' => ['font-status', 'disabled', 'use-ajax'],
+            ],
+          ]
+        );
         $text = $this->t('Enable');
-        $link = \Drupal::l($text, $url);
+        $link = Link::fromTextAndUrl($text, $url)->toString();
 
         $response = new AjaxResponse();
         return $response->addCommand(new ReplaceCommand('#font-status-' . $font->id(), $link));
       }
       else {
-        drupal_set_message($this->t('Font @font successfully disabled', ['@font' => $font->name->value]));
+        Drupal::messenger()->addMessage($this->t('Font @font successfully disabled', ['@font' => $font->name->value]));
         return $this->redirect('entity.font.collection');
       }
     }
@@ -77,7 +93,7 @@ class FontYourFaceController extends ControllerBase {
         ], 503);
       }
       else {
-        drupal_set_message($error, 'error');
+        Drupal::messenger()->addMessage($error, 'error');
         return $this->redirect('entity.font.collection');
       }
     }

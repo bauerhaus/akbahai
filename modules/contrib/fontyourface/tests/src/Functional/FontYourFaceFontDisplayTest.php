@@ -3,14 +3,19 @@
 namespace Drupal\Tests\fontyourface\Functional;
 
 use Drupal\Core\Url;
-use Drupal\simpletest\WebTestBase;
+use Drupal\Tests\BrowserTestBase;
 
 /**
  * Tests that font displays show css.
  *
  * @group fontyourface
  */
-class FontYourFaceFontDisplayTest extends WebTestBase {
+class FontYourFaceFontDisplayTest extends BrowserTestBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected $defaultTheme = 'stark';
 
   /**
    * Modules to install.
@@ -81,8 +86,8 @@ class FontYourFaceFontDisplayTest extends WebTestBase {
 
     // Assert Arial loads in general bartik section.
     $this->drupalGet('/node');
-    $this->assertRaw('<meta name="Websafe Font" content="Arial" />');
-    $this->assertRaw("fontyourface/font_display/headers.css");
+    $this->assertSession()->responseContains('<meta name="Websafe Font" content="Arial" />');
+    $this->assertSession()->responseContains("fontyourface/font_display/headers.css");
   }
 
 }

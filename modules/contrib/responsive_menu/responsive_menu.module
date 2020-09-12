@@ -11,6 +11,7 @@ use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\Core\Menu\MenuLinkInterface;
 use Drupal\Core\File\FileSystemInterface;
+use Drupal\Component\Utility\Html;
 
 define('RESPONSIVE_MENU_BREAKPOINT_FILENAME', '/responsive_menu_breakpoint.css');
 
@@ -63,6 +64,11 @@ function responsive_menu_theme($existing, $type, $theme, $path) {
     'variables' => ['children' => []],
   ];
 
+  $return['responsive_menu_off_canvas'] = [
+    'template' => 'responsive-menu-off-canvas',
+    'variables' => ['menu_name' => NULL, 'items' => [], 'attributes' => []],
+  ];
+
   return $return;
 }
 
@@ -112,6 +118,17 @@ function responsive_menu_preprocess_html(&$variables) {
 function responsive_menu_page_bottom(&$page) {
   // Get the configuration.
   $config = \Drupal::config('responsive_menu.settings');
+
+  // A developer may not want to output the off-canvas menu's HTML into the DOM
+  // and activate the mmenu library. We allow a variable to by altered by a
+  // custom hook. If the value is FALSE then rendering does not continue and no
+  // output is added to page bottom.
+  $off_canvas_output = TRUE;
+  \Drupal::ModuleHandler()
+    ->alter('responsive_menu_off_canvas_output', $off_canvas_output);
+  if ($off_canvas_output === FALSE) {
+    return;
+  }
 
   // A site builder can allow this module to work with the admin theme.
   if ($config->get('allow_admin') == FALSE && _current_theme_is_admin()) {
@@ -167,12 +184,6 @@ function responsive_menu_page_bottom(&$page) {
     'modifyViewport' => $config->get('modify_viewport'),
     'use_bootstrap' => $config->get('use_bootstrap'),
     'breakpoint' => $config->get('horizontal_media_query'),
-    'superfish' => [
-      'active' => $config->get('horizontal_superfish'),
-      'delay' => $config->get('horizontal_superfish_delay'),
-      'speed' => $config->get('horizontal_superfish_speed'),
-      'speedOut' => $config->get('horizontal_superfish_speed_out'),
-    ],
     'drag' => $config->get('drag'),
   ];
 
@@ -215,6 +226,45 @@ function responsive_menu_page_bottom(&$page) {
   }
 
   $page['page_bottom']['off_canvas'] = $output;
+}
+
+/**
+ * Implements hook_responsive_menu_off_canvas_tree_alter().
+ */
+function responsive_menu_responsive_menu_off_canvas_tree_alter(array &$menu) {
+  // Iterate over the top level of menu items and call the recursive function
+  // which adds a unique class to each item and it's children.
+  foreach ($menu['#items'] as &$item) {
+    responsive_menu_off_canvas_add_class($item);
+  }
+}
+
+/**
+ * Recursively adds the uuid of each menu item as a class.
+ *
+ * @param array $item
+ *   The render array of a menu item.
+ */
+function responsive_menu_off_canvas_add_class(array &$item) {
+  if (!empty($item['original_link'])) {
+    $link = $item['original_link'];
+    $id = $link->getPluginId();
+    // User created menu link ids take the form 'menu_link_content:{uuid}'.
+    if (strpos($id, ':')) {
+      $parts = explode(':', $id);
+    }
+    // Module menu link ids take the form '{module}.{uuid}'.
+    else {
+      $parts = explode('.', $id);
+    }
+    $uuid = Html::cleanCssIdentifier($parts[1]);
+    $item['attributes']->addClass('menu-item--' . $uuid);
+  }
+  if (!empty($item['below'])) {
+    foreach ($item['below'] as &$below) {
+      responsive_menu_off_canvas_add_class($below);
+    }
+  }
 }
 
 /**

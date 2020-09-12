@@ -2,6 +2,7 @@
 
 namespace Drupal\fontyourface\Form;
 
+use Drupal;
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -32,13 +33,13 @@ class FontForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Font.', [
+        Drupal::messenger()->addMessage($this->t('Created the %label Font.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Font.', [
+        Drupal::messenger()->addMessage($this->t('Saved the %label Font.', [
           '%label' => $entity->label(),
         ]));
     }

@@ -3,14 +3,19 @@
 namespace Drupal\Tests\fontyourface\Functional;
 
 use Drupal\Core\Url;
-use Drupal\simpletest\WebTestBase;
+use Drupal\Tests\BrowserTestBase;
 
 /**
  * Tests that installing @font-your-face submodules is not broken.
  *
  * @group fontyourface
  */
-class FontYourFaceSubmoduleInstallTest extends WebTestBase {
+class FontYourFaceSubmoduleInstallTest extends BrowserTestBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected $defaultTheme = 'stark';
 
   /**
    * Modules to install.
@@ -45,7 +50,7 @@ class FontYourFaceSubmoduleInstallTest extends WebTestBase {
     // Font settings page.
     $this->drupalGet(Url::fromRoute('font.settings'));
     $this->assertText(t('Settings form for @font-your-face. Support modules can use this form for settings or to import fonts.'));
-    $this->assertRaw(t('Import from websafe_fonts_test'));
+    $this->assertSession()->responseContains(t('Import from websafe_fonts_test'));
   }
 
   /**
@@ -68,10 +73,10 @@ class FontYourFaceSubmoduleInstallTest extends WebTestBase {
     $this->assertText('Georgia');
 
     // Assert fonts load on font collection page.
-    $this->assertRaw('<meta name="Websafe Font" content="Arial" />');
-    $this->assertRaw('<meta name="Websafe Font" content="Courier New" />');
-    $this->assertRaw('<meta name="Websafe Font" content="Georgia" />');
-    $this->assertRaw('<meta name="Websafe Font" content="Verdana" />');
+    $this->assertSession()->responseContains('<meta name="Websafe Font" content="Arial" />');
+    $this->assertSession()->responseContains('<meta name="Websafe Font" content="Courier New" />');
+    $this->assertSession()->responseContains('<meta name="Websafe Font" content="Georgia" />');
+    $this->assertSession()->responseContains('<meta name="Websafe Font" content="Verdana" />');
 
     // ENsure font is not loaded on front page because font is not enabled.
     $this->drupalGet('<front>');
@@ -90,11 +95,12 @@ class FontYourFaceSubmoduleInstallTest extends WebTestBase {
     $this->drupalGet(url::fromRoute('entity.font.activate', ['font' => 1, 'js' => 'nojs']));
     $this->assertText('Font Arial successfully enabled');
 
-    // Flush the caches. Not an issue in prod but seems to be in simpletest. Will keep an eye on it.
+    // Flush the caches. Not an issue in prod but seems to be in simpletest.
+    // Will keep an eye on it.
     $this->resetAll();
 
     $this->drupalGet('/node');
-    $this->assertRaw('<meta name="Websafe Font" content="Arial" />');
+    $this->assertSession()->responseContains('<meta name="Websafe Font" content="Arial" />');
   }
 
 }

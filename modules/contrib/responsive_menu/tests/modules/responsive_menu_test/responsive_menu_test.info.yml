@@ -11,7 +11,7 @@ dependencies:
   - responsive_menu:responsive_menu
   - drupal:language
 
-# Information added by Drupal.org packaging script on 2020-07-09
-version: '4.3.1'
+# Information added by Drupal.org packaging script on 2020-08-29
+version: '4.4.0'
 project: 'responsive_menu'
-datestamp: 1594280179
+datestamp: 1598685338

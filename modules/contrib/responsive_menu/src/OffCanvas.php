@@ -51,6 +51,11 @@ class OffCanvas implements TrustedCallbackInterface {
       // Use the default sorting of menu links.
       ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
     ];
+
+    // Allow other modules to alter manipulators before transforming menu tree.
+    \Drupal::ModuleHandler()
+      ->alter('responsive_menu_off_canvas_manipulators', $manipulators);
+
     // Iterate over the menus and merge them together.
     foreach ($menus as $menu_name) {
       $menu_name = trim($menu_name);
@@ -67,6 +72,10 @@ class OffCanvas implements TrustedCallbackInterface {
     }
 
     $menu = $menu_tree->build($combined_tree);
+    // Manipulate the #theme element to provide a known working template, rather
+    // than leave it up to the theme to provide one which may break the
+    // off-canvas menu.
+    $menu['#theme'] = 'responsive_menu_off_canvas';
 
     // Allow other modules to manipulate the built tree data.
     \Drupal::ModuleHandler()->alter('responsive_menu_off_canvas_tree', $menu);

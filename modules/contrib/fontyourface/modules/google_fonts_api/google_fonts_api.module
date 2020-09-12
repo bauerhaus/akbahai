@@ -25,7 +25,7 @@ function google_fonts_api_fontyourface_api() {
  */
 function google_fonts_api_modules_installed($modules) {
   if (in_array('google_fonts_api', $modules)) {
-    drupal_set_message(t('Due to the number of fonts, automated import from install for Google Fonts is disabled. Please use @link to import Google Fonts.', ['@link' => Link::createFromRoute('@font-your-face settings', 'font.settings')->toString()]));
+    Drupal::messenger()->addMessage(t('Due to the number of fonts, automated import from install for Google Fonts is disabled. Please use @link to import Google Fonts.', ['@link' => Link::createFromRoute('@font-your-face settings', 'font.settings')->toString()]));
   }
 }
 
@@ -112,20 +112,24 @@ function google_fonts_api_fontyourface_import($font_context = []) {
   if (empty($context['sandbox'])) {
     $context['sandbox']['fonts'] = _google_fonts_api_get_fonts_from_api();
     $context['sandbox']['progress'] = 0;
-    $context['sandbox']['max'] = count($context['sandbox']['fonts']);
+    $all = _google_fonts_api_convert_api_results($context['sandbox']['fonts']);
+    $context['sandbox']['max'] = count($all);
   }
-  $font = array_pop($context['sandbox']['fonts']);
+  $fonts = _google_fonts_api_convert_api_results($context['sandbox']['fonts']);
+
+  $index = $context['sandbox']['progress'];
+  $font = $fonts[$index];
   if (!empty($font)) {
     if (!isset($font->tags)) {
       $font->tags = [];
     }
     fontyourface_save_font($font);
     $context['message'] = "Imported {$context['sandbox']['progress']} of {$context['sandbox']['max']}";
-    $context['sandbox']['progress'] = $context['sandbox']['max'] - count($context['sandbox']['fonts']);
+    $context['sandbox']['progress']++;
     $context['finished'] = $context['sandbox']['progress'] / $context['sandbox']['max'];
   }
   else {
-    drupal_set_message(t('Imported @count fonts from Google Fonts', ['@count' => $context['sandbox']['progress']]));
+    Drupal::messenger()->addMessage(t('Imported @count fonts from Google Fonts', ['@count' => $context['sandbox']['progress']]));
   }
   return $context;
 }
@@ -148,13 +152,13 @@ function _google_fonts_api_get_fonts_from_api() {
     $data = (string) $response->getBody();
   }
   catch (RequestException $e) {
-    drupal_set_message(t('The list of Google Fonts could not be fetched. Verify that your server can connect the Google Servers (https://www.googleapis.com). Error: %error', ['%error' => $response->error]), 'error');
+    Drupal::messenger()->addMessage(t('The list of Google Fonts could not be fetched. Verify that your server can connect the Google Servers (https://www.googleapis.com). Error: %error', ['%error' => $response->error]), 'error');
     return FALSE;
   }
 
   $json_results = json_decode($data);
 
-  return _google_fonts_api_convert_api_results($json_results->items);
+  return $json_results->items;
 }
 
 /**
@@ -203,36 +207,40 @@ function _google_fonts_api_convert_api_results(array $json_font_list) {
               $css_weight = $json_font_variant;
             }
             elseif (is_numeric(substr($json_font_variant, 0, 3))) {
-              // Variant is a combined string of number and string, like 400italic.
-              // The numeric part is always three characters long, so we can split it easily.
+              // Variant is a combined string of number and string, like
+              // 400italic.
+              // The numeric part is always three characters long, so we can
+              // split it easily.
               $css_style = substr($json_font_variant, 3);
               $css_weight = substr($json_font_variant, 0, 3);
             }
         }
 
-        $fonts[$font_id] = new stdClass();
-        $fonts[$font_id]->name = $font_id;
-        $fonts[$font_id]->url = 'https://www.google.com/webfonts/family?family=' . $json_font->family . '&subset=' . $json_font_subset . '#' . $json_font_variant;
-        $fonts[$font_id]->provider = 'google_fonts_api';
-        $fonts[$font_id]->css_family = $json_font->family;
-        $fonts[$font_id]->css_style = $css_style;
-        $fonts[$font_id]->css_weight = $css_weight;
-        $fonts[$font_id]->designer = '';
-        $fonts[$font_id]->designer_url = '';
-        $fonts[$font_id]->foundry = '';
-        $fonts[$font_id]->foundry_url = '';
-        $fonts[$font_id]->license = '';
-        $fonts[$font_id]->license_url = '';
-        $fonts[$font_id]->classification = [
+        $font = new stdClass();
+        $font->name = $font_id;
+        $font->url = 'https://www.google.com/webfonts/family?family=' . $json_font->family . '&subset=' . $json_font_subset . '#' . $json_font_variant;
+        $font->provider = 'google_fonts_api';
+        $font->css_family = $json_font->family;
+        $font->css_style = $css_style;
+        $font->css_weight = $css_weight;
+        $font->designer = '';
+        $font->designer_url = '';
+        $font->foundry = '';
+        $font->foundry_url = '';
+        $font->license = '';
+        $font->license_url = '';
+        $font->classification = [
           $json_font->category,
         ];
-        $fonts[$font_id]->language = [
+        $font->language = [
           $json_font_subset,
         ];
-        $fonts[$font_id]->metadata = [
+        $font->metadata = [
           'path' => $json_font->family . ':' . $json_font_variant,
           'subset' => $json_font_subset,
         ];
+
+        $fonts[] = $font;
       }
     }
   }

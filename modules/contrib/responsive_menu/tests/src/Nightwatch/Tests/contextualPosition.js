@@ -11,11 +11,14 @@ module.exports = {
   },
   'Confirm that changing the setting to contextual makes the opened mmenu appear on the left with a LTR language': browser => {
     browser
+      .drupalRelativeURL('/node/1')
+    browser
       .drupalCreateUser({
         name: 'user',
         password: '123',
         permissions: ['administer site configuration'],
       })
+    browser
       .drupalLogin({ name: 'user', password: '123' })
       .resizeWindow(1200, 800)
       .drupalRelativeURL('/admin/config/user-interface/responsive-menu')
@@ -40,6 +43,8 @@ module.exports = {
       .drupalLogAndEnd({ onlyOnError: false });
   },
   'Confirm that changing the setting to contextual makes the opened mmenu appear on the right with an RTL language': browser => {
+    browser
+      .drupalRelativeURL('/node/1')
     browser
       .resizeWindow(1200, 800)
       .drupalRelativeURL('/admin/config/user-interface/responsive-menu')

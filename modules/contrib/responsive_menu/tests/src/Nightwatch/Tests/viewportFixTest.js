@@ -11,6 +11,8 @@ module.exports = {
   },
   'Confirm that enabling and disabling the viewport option changes the viewport meta tag': browser => {
     browser
+      .drupalRelativeURL('/node/1')
+    browser
       .drupalCreateUser({
         name: 'user',
         password: '123',
