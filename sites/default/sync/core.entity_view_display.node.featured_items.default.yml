@@ -15,8 +15,8 @@ dependencies:
   module:
     - comment
     - ds
-    - imagefield_slideshow
     - read_more_field
+    - slick
     - text
     - user
 id: node.featured_items.default
@@ -56,17 +56,58 @@ content:
     weight: 3
     label: hidden
     settings:
-      imagefield_slideshow_style: featured_slideshow_image
-      imagefield_slideshow_style_effects: fadeout
-      imagefield_slideshow_style_pause: 'true'
-      imagefield_slideshow_prev_next: '1'
-      imagefield_slideshow_transition_speed: '500'
-      imagefield_slideshow_timeout: '5000'
-      imagefield_slideshow_pager: '1'
+      style: ''
+      optionset: akbahai
+      optionset_thumbnail: ''
+      skin: ''
+      skin_thumbnail: ''
+      image_style: ''
+      responsive_image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      thumbnail_style: ''
+      ratio: '16:9'
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      cache: 0
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
     third_party_settings:
       ds:
         ds_limit: ''
-    type: imagefield_slideshow_field_formatter
+    type: slick_image
     region: content
   links:
     weight: 1
