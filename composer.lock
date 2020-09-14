@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9506385cbcf76148509433568b422b4",
+    "content-hash": "550806bc733381a6e4e058ba26b84f12",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1795,6 +1795,54 @@
             }
         },
         {
+            "name": "drupal/collapse_text",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/collapse_text.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/collapse_text-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "87c6d33538c036a15a6abcd36e8ec474fbcb7365"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1499849643",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "DYdave",
+                    "homepage": "https://www.drupal.org/user/467284"
+                },
+                {
+                    "name": "mukila",
+                    "homepage": "https://www.drupal.org/user/3223526"
+                }
+            ],
+            "description": "Input filter allowing text sections to become collapsible.",
+            "homepage": "https://www.drupal.org/project/collapse_text",
+            "support": {
+                "source": "https://git.drupalcode.org/project/collapse_text"
+            }
+        },
+        {
             "name": "drupal/colorbutton",
             "version": "1.2.0",
             "source": {
@@ -3155,6 +3203,50 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/panelbutton",
                 "issues": "http://drupal.org/project/issues/panelbutton"
+            }
+        },
+        {
+            "name": "drupal/read_more_field",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/read_more_field.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/read_more_field-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "35fc40746ac7d82f59a29f0166e47a8b70f686e7"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1548261480",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dimiter",
+                    "homepage": "https://www.drupal.org/user/3499449"
+                }
+            ],
+            "description": "Provides a field with 'read more' functionality.",
+            "homepage": "https://www.drupal.org/project/read_more_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/read_more_field"
             }
         },
         {
@@ -7768,9 +7860,6 @@
                 "ext-zip": "Enabling the zip extension allows you to unzip archives",
                 "ext-zlib": "Allow gzip compression of HTTP requests"
             },
-            "bin": [
-                "bin/composer"
-            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -9064,6 +9153,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {

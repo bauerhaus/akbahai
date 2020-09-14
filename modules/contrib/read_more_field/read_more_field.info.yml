@@ -1,0 +1,13 @@
+name: Read More Field
+type: module
+description: Provides a field with 'read more' functionality.
+# core: 8.x
+package: Field types
+dependencies:
+  - drupal:field
+
+# Information added by Drupal.org packaging script on 2019-01-23
+version: '8.x-1.0'
+core: '8.x'
+project: 'read_more_field'
+datestamp: 1548261484
