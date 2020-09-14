@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_pages.body
+    - field.field.node.landing_pages.comment
     - field.field.node.landing_pages.field_fp_teasers_bottom
     - field.field.node.landing_pages.field_fp_teasers_top
     - field.field.node.landing_pages.field_intro_paragraph
@@ -26,12 +27,18 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
 hidden:
+  comment: true
   field_fp_teasers_bottom: true
   field_fp_teasers_top: true
   field_intro_paragraph: true

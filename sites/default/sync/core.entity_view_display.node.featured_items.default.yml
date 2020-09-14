@@ -3,16 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.featured_items.body
+    - field.field.node.featured_items.field_comments
     - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
+    - field.field.node.featured_items.field_narative
     - field.field.node.featured_items.field_slide_show
     - field.field.node.featured_items.field_subtitle
     - field.field.node.featured_items.field_teaser_image
     - node.type.featured_items
   module:
+    - comment
     - ds
     - imagefield_slideshow
+    - read_more_field
     - text
     - user
 id: node.featured_items.default
@@ -20,22 +25,36 @@ targetEntityType: node
 bundle: featured_items
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 3
+  content_moderation_control:
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_comments:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
     region: content
   field_intro_paragraph:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_narative:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: read_more_formatter
+    region: content
   field_slide_show:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       imagefield_slideshow_style: featured_slideshow_image
@@ -51,11 +70,12 @@ content:
     type: imagefield_slideshow_field_formatter
     region: content
   links:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  body: true
   field_featured_sort: true
   field_subtitle: true
   field_teaser_image: true

@@ -1,0 +1,22 @@
+uuid: 870bb2c3-e0b5-4c5f-bcc2-70118f0d43a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_narative
+    - node.type.featured_items
+  module:
+    - read_more_field
+id: node.featured_items.field_narative
+field_name: field_narative
+entity_type: node
+bundle: featured_items
+label: Narative
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  label: 'Read more'
+field_type: read_more

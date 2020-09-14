@@ -3,13 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.landing_pages.body
+    - field.field.node.landing_pages.comment
     - field.field.node.landing_pages.field_fp_teasers_bottom
     - field.field.node.landing_pages.field_fp_teasers_top
     - field.field.node.landing_pages.field_intro_paragraph
     - field.field.node.landing_pages.field_landing_image
     - node.type.landing_pages
   module:
+    - comment
     - ds
     - text
     - user
@@ -40,6 +43,20 @@ content:
     label: hidden
     type: text_default
     weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment:
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  content_moderation_control:
+    weight: -20
     settings: {  }
     third_party_settings: {  }
     region: content

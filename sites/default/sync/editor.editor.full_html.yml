@@ -56,14 +56,23 @@ settings:
         -
           name: Alignment
           items:
+            - JustifyLeft
             - JustifyCenter
             - JustifyBlock
             - JustifyRight
+            - Indent
+            - Outdent
+        -
+          name: text
+          items:
+            - Superscript
+            - Subscript
+            - RemoveFormat
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: 'blockquote.blockquote-reference|Blockquote Reference'
+    language:
+      language_list: un
     colorbutton:
       colors: ''
 image_upload:

@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.featured_items.body
+    - field.field.node.featured_items.field_comments
     - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
+    - field.field.node.featured_items.field_narative
     - field.field.node.featured_items.field_slide_show
     - field.field.node.featured_items.field_subtitle
     - field.field.node.featured_items.field_teaser_image
@@ -42,6 +44,11 @@ targetEntityType: node
 bundle: featured_items
 mode: teaser
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_subtitle:
     type: string
     weight: 1
@@ -61,7 +68,9 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_comments: true
   field_featured_sort: true
   field_intro_paragraph: true
+  field_narative: true
   field_slide_show: true
   links: true
