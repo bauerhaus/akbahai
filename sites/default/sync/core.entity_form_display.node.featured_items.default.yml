@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.featured_items.body
     - field.field.node.featured_items.field_comments
     - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
@@ -26,16 +25,6 @@ targetEntityType: node
 bundle: featured_items
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 3
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   field_comments:
     weight: 11
     settings: {  }

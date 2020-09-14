@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.featured_items.body
     - field.field.node.featured_items.field_comments
     - field.field.node.featured_items.field_featured_sort
     - field.field.node.featured_items.field_intro_paragraph
@@ -67,7 +66,6 @@ content:
       image_link: content
     third_party_settings: {  }
 hidden:
-  body: true
   field_comments: true
   field_featured_sort: true
   field_intro_paragraph: true
