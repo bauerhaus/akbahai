@@ -442,6 +442,7 @@ template {
 .header .site-name a{
   font-style: normal;
   text-decoration: none;
+  color:#000000;
 }
 .search{width: 100%;
 height:2em;
@@ -555,6 +556,12 @@ blockquote>p {
   padding:.5em .5em .5em .5em;
   margin:0;
 }
+/* -- read more styles -- */
+.read-more{line-height: 1.6}
+.read-more__hidden{padding:.5rem;}
+.read-more__teaser{font-size: 1.1em;padding:1rem;;}
+.slick-slide .media--image{border: 2px solid #adadad;}
+
 /* end of specific akbahai styles
    ==========================================================================
    ==========================================================================
@@ -578,10 +585,17 @@ blockquote .author
 .site-name a:visited{
   color: #000000;
 }
-body{
-  background-color: #f4eeff;
+body {
+    background-color: #ffffff;
+    background-image: url(/sites/default/files/background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
 }
-
+.dialog-off-canvas-main-canvas{
+  background-color: #f4eeff;
+  padding:1rem;
+}
 .field--name-body{
   background-color: #dcd6f7;
   color:#424874;
@@ -676,6 +690,9 @@ ul.sf-menu a, ul.sf-menu span.nolink{
   body{
     width: 960px;
     margin: auto;
+  }
+  .dialog-off-canvas-main-canvas{
+    margin-top:1rem;
   }
   #block-akbahai-search{
     position: static;
