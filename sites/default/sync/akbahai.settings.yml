@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: themes/custom/akbahai/images/logo.png
+  path: 'public://logo_1.png'
 favicon:
   use_default: 0
   path: themes/custom/akbahai/images/favicon.ico

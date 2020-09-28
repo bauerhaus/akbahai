@@ -30,7 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_comments:
-    weight: 5
+    weight: 4
     label: above
     settings:
       view_mode: default
@@ -39,21 +39,21 @@ content:
     type: comment_default
     region: content
   field_intro_paragraph:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_narative:
-    weight: 4
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: read_more_formatter
     region: content
   field_slide_show:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       style: ''
@@ -109,12 +109,8 @@ content:
         ds_limit: ''
     type: slick_image
     region: content
-  links:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_featured_sort: true
   field_subtitle: true
   field_teaser_image: true
+  links: true

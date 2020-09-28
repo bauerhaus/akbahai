@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.landing_pages.body
     - field.field.node.landing_pages.comment
     - field.field.node.landing_pages.field_fp_teasers_bottom
@@ -12,7 +11,6 @@ dependencies:
     - field.field.node.landing_pages.field_landing_image
     - node.type.landing_pages
   module:
-    - comment
     - ds
     - text
     - user
@@ -28,7 +26,6 @@ third_party_settings:
         label: ''
     regions:
       content:
-        - links
         - field_landing_image
         - field_intro_paragraph
         - field_fp_teasers_top
@@ -42,27 +39,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment:
-    weight: 6
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
-  content_moderation_control:
-    weight: -20
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_fp_teasers_bottom:
     type: viewsreference_formatter
-    weight: 5
+    weight: 4
     region: content
     label: hidden
     settings:
@@ -70,7 +53,7 @@ content:
         - block
     third_party_settings: {  }
   field_fp_teasers_top:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       plugin_types:
@@ -79,7 +62,7 @@ content:
     type: viewsreference_formatter
     region: content
   field_intro_paragraph:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -87,16 +70,14 @@ content:
     region: content
   field_landing_image:
     type: entity_reference_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: full_page_width_960
       link: false
     third_party_settings: {  }
     region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  comment: true
+  content_moderation_control: true
+  links: true
