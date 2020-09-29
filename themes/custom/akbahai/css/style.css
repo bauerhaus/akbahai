@@ -428,11 +428,10 @@ template {
    begin specific akbahai styles
 */
 
-
 .header{}
 .header #block-akbahai-branding{}
 .header .site-logo{width:19%; float:left;}
-.header .site-name{width:80%; float:right;}
+.header .site-name{width:80%; float:left;}
 .site-name a{
   /* have the site name verticaly centered */
   height: 60px;
@@ -478,8 +477,8 @@ blockquote { quotes: '\201c' '\201d'; }
 blockquote>p:before { content: open-quote; font-size: 1.3em; }
 blockquote>p:after  { content: close-quote; font-size: 1.3em;}
 blockquote{
-  font-size: 1.2em;
-  width:60%;
+  font-size: 1.3em;
+  width:80%;
   margin:50px auto;
   color: #555555;
   padding-left: 2em;
@@ -515,10 +514,11 @@ blockquote{
     margin-top:1em;
   }
   .field--name-field-intro-paragraph blockquote .author,
+  .field--name-field-intro-paragraph blockquote .author a,
   .blockquote-reference{
     font-style: italic;
-    font-size: .8em;
-    color: #424874;
+    font-size: 1em;
+    color: #d7b221;
   }
 
   blockquote .author::before{content: "~"}
@@ -621,6 +621,7 @@ body {
 ul.sf-menu a, ul.sf-menu span.nolink{
   padding:.5em 1em;
   text-decoration: none;
+    color:#000;
 }
 .field--name-field-subtitle a{
   color:#423874;
@@ -630,6 +631,11 @@ ul.sf-menu a, ul.sf-menu span.nolink{
 .path-frontpage .field--name-body h1{
   text-align: center;
 }
+ul.menu a.is-active {
+    background-color: #E8E2F2;
+}
+.sf-depth-2{margin-left:2rem;}
+#superfish-main-toggle span{color: #000000;}
 /* end of  akbahai color pallet
    ==========================================================================
    ==========================================================================
