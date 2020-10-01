@@ -71,7 +71,9 @@ class ViewsSlideshowCycleCommands extends DrushCommands {
   }
 
   /**
-   * Download and install the jQuery Cycle, JQuery hoverIntent, JSON2 and Pause libraries.
+   * Download and install the jQuery Cycle.
+   *
+   * Download and install JQuery hoverIntent, JSON2 and Pause libraries.
    *
    * @command views:slideshow:lib
    * @aliases dl-cycle-lib,views-slideshow-cycle-lib

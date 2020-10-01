@@ -40,6 +40,17 @@ use Drupal\fontyourface\FontDisplayInterface;
  *     "edit-form" = "/admin/appearance/font/font_display/{font_display}/edit",
  *     "delete-form" = "/admin/appearance/font/font_display/{font_display}/delete",
  *     "collection" = "/admin/appearance/font/font_display"
+ *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "uuid",
+ *     "font_url",
+ *     "style",
+ *     "weight",
+ *     "fallback",
+ *     "selectors",
+ *     "theme"
  *   }
  * )
  */

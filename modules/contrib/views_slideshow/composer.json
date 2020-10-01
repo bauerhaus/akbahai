@@ -2,12 +2,13 @@
   "name": "drupal/views_slideshow",
   "description": "Describes relationships between entities.",
   "type": "drupal-module",
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "homepage": "https://www.drupal.org/project/views_slideshow",
   "authors": [
     {
-      "name": "See contributors",
-      "homepage":"https://www.drupal.org/node/160350/committers"
+      "name": "Neslee Canil Pinto",
+      "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+      "role": "Maintainer"
     }
   ],
   "support": {

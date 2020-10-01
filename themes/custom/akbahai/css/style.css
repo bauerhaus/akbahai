@@ -540,7 +540,7 @@ blockquote>p {
  font-weight: normal;
  color:#424874;
 }
-.path-frontpage .views-view-grid .views-col{padding:.5em;}
+.path-frontpage .views-view-grid .views-col{padding:1%;}
 .image-style-featured-teaser{
   max-width: 100% !important;
   height: auto;
@@ -561,6 +561,10 @@ blockquote>p {
 .read-more__hidden{padding:.5rem;}
 .read-more__teaser{font-size: 1.1em;padding:1rem;;}
 .slick-slide .media--image{border: 2px solid #adadad;}
+
+/* front page */
+.field--name-field-fp-teasers-bottom{margin-top: 1.5rem;}
+.path-frontpage .views-view-grid{text-align: center;}
 
 /* end of specific akbahai styles
    ==========================================================================

@@ -10,4 +10,4 @@ use Drupal\Core\Plugin\PluginFormInterface;
 /**
  * Provides an interface for Views slideshow types.
  */
-interface ViewsSlideshowTypeInterface extends PluginInspectionInterface, ConfigurableInterface, PluginFormInterface, DependentPluginInterface  {}
+interface ViewsSlideshowTypeInterface extends PluginInspectionInterface, ConfigurableInterface, PluginFormInterface, DependentPluginInterface {}

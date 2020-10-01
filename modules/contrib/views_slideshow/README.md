@@ -91,7 +91,7 @@ documentation.
 
 ## CONTRIBUTORS
 
-Current maintainers:
+Current maintainer:
 
   * [Neslee Canil Pinto](https://www.drupal.org/u/neslee-canil-pinto)
 
