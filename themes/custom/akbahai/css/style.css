@@ -566,6 +566,7 @@ blockquote>p {
 .field--name-field-fp-teasers-bottom{margin-top: 1.5rem;}
 .path-frontpage .views-view-grid{text-align: center;}
 
+
 /* end of specific akbahai styles
    ==========================================================================
    ==========================================================================
@@ -640,6 +641,10 @@ ul.menu a.is-active {
 }
 .sf-depth-2{margin-left:2rem;}
 #superfish-main-toggle span{color: #000000;}
+ul.sf-menu .sf-sub-indicator {right:.1em !important;}
+ul.sf-menu.sf-horizontal.sf-shadow ul{background-color: #ffffff;}
+ul.menu.sf-menu .menuparent ul{margin-left: 1rem;border-left: thin solid #efefef;}
+
 /* end of  akbahai color pallet
    ==========================================================================
    ==========================================================================
