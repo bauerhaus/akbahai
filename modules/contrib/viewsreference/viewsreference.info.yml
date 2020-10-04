@@ -6,6 +6,6 @@ package: Views
 type: module
 
 # Information added by Drupal.org packaging script on 2020-10-01
-version: '8.x-1.5'
+version: '8.x-1.6'
 project: 'viewsreference'
-datestamp: 1601512920
+datestamp: 1601529308

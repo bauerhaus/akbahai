@@ -220,6 +220,7 @@ trait ViewsReferenceTrait {
    * Helper to convert view array of machine names to label names.
    */
   protected function getViewNames($views_array) {
+    $views_list = [];
     foreach ($views_array as $key => $value) {
       $view = Views::getView($key);
       if (isset($view)) {
