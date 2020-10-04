@@ -1,0 +1,26 @@
+uuid: 0d7b8461-7019-4f6a-8ec3-1ed5d859d0fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - copyright_footer
+  theme:
+    - akbahai
+id: copyrightfooter
+theme: akbahai
+region: footer_bottom
+weight: -4
+provider: null
+plugin: copyright_footer
+settings:
+  id: copyright_footer
+  label: 'Copyright Footer'
+  provider: copyright_footer
+  label_display: '0'
+  organization_name: 'National Spiritual Assembly of the Bahá’ís of Alaska'
+  organization_url: ''
+  year_origin: null
+  year_to_date: null
+  version: ''
+  version_url: ''
+visibility: {  }

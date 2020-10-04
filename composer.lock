@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba3d92cd6719d9038f874c5de3c64ecc",
+    "content-hash": "4ba25613e3ddf2a0c44fb0ecbdfdd606",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2104,6 +2104,50 @@
                 "source": "https://git.drupalcode.org/project/config_split",
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "slack": "https://drupal.slack.com/archives/C45342CDD"
+            }
+        },
+        {
+            "name": "drupal/copyright_footer",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/copyright_footer.git",
+                "reference": "8.x-1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/copyright_footer-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "6c5e4d6686dbf2d40bbb45cf6f5300a0b29a1570"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.6",
+                    "datestamp": "1600160318",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "yas",
+                    "homepage": "https://www.drupal.org/user/17536"
+                }
+            ],
+            "description": "Provides a block for Copyright indication.",
+            "homepage": "https://www.drupal.org/project/copyright_footer",
+            "support": {
+                "source": "https://git.drupalcode.org/project/copyright_footer"
             }
         },
         {

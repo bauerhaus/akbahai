@@ -1,6 +1,6 @@
 uuid: 98329c7d-f9bc-40f1-9303-1c3f722d229d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: akbahai_footer
 theme: akbahai
-region: footer_second
-weight: -6
+region: footer_third
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

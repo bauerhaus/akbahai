@@ -1,0 +1,25 @@
+uuid: 245cad23-93e7-4f0c-aba8-313569f88abb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:f04eebe0-11ae-443a-828f-ae2e8eed3750'
+  module:
+    - block_content
+  theme:
+    - akbahai
+id: footerblock
+theme: akbahai
+region: footer_bottom
+weight: -6
+provider: null
+plugin: 'block_content:f04eebe0-11ae-443a-828f-ae2e8eed3750'
+settings:
+  id: 'block_content:f04eebe0-11ae-443a-828f-ae2e8eed3750'
+  label: 'Footer Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -567,7 +567,21 @@ blockquote>p {
 .path-frontpage .views-view-grid{text-align: center;}
 /* edit page for logged in users */
 .block-local-tasks-block{background-color: red;}
-
+/* copyright */
+.block-copyright-footer{color:#91969e;}
+/* footer */
+.one-third{width:100%;float:none;}
+.footer-head{margin: 0 .5rem;font-size: 1rem;}
+.one-third p{font-size: .8rem;}
+.foot-links{
+    font-size: .8rem;
+    text-align: center;
+    background-color: #fff;
+    padding: .2rem;
+}
+.foot-link-span{margin:0 2rem;}
+img.inline-block{width:2rem;}
+.footer-head a{font-size: 1.2rem;vertical-align: top;}
 /* end of specific akbahai styles
    ==========================================================================
    ==========================================================================
@@ -688,6 +702,7 @@ ul.menu.sf-menu .menuparent ul{margin-left: 1rem;border-left: thin solid #efefef
   .path-frontpage .views-view-grid .views-col{
     width:45% !important;
   }
+  .one-third{width:32%;float:left;}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

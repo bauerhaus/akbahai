@@ -12,8 +12,8 @@ _core:
   default_config_hash: 8a31Ywc1t2zlddGd3bmDrFMefWqgSK2E02ceFdr-bfc
 id: akbahai_account_menu
 theme: akbahai
-region: footer_first
-weight: -6
+region: footer_bottom
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:
