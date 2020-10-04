@@ -17,10 +17,10 @@ type: content_moderation
 type_settings:
   states:
     archived:
+      published: false
+      default_revision: false
       label: Archived
       weight: 1
-      published: false
-      default_revision: true
     draft:
       label: Draft
       published: false
@@ -28,7 +28,7 @@ type_settings:
       weight: -2
     needs_review:
       published: false
-      default_revision: true
+      default_revision: false
       label: 'Needs Review'
       weight: -1
     published:

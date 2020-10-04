@@ -565,7 +565,8 @@ blockquote>p {
 /* front page */
 .field--name-field-fp-teasers-bottom{margin-top: 1.5rem;}
 .path-frontpage .views-view-grid{text-align: center;}
-
+/* edit page for logged in users */
+.block-local-tasks-block{background-color: red;}
 
 /* end of specific akbahai styles
    ==========================================================================
