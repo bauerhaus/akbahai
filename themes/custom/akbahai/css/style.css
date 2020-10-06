@@ -581,7 +581,15 @@ blockquote>p {
 }
 .foot-link-span{margin:0 2rem;}
 img.inline-block{width:2rem;}
-.footer-head a{font-size: 1.2rem;vertical-align: top;}
+.footer-head a{
+  font-size: 1.2rem;
+  vertical-align: top;
+  text-decoration: none;
+}
+.global-community{
+margin-bottom:.45rem;
+margin-left: 1rem;}
+#block-footerblock .one-third img{border-radius: 1rem;}
 /* end of specific akbahai styles
    ==========================================================================
    ==========================================================================
