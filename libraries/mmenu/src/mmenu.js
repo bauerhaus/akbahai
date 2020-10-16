@@ -4,9 +4,6 @@
  *
  * Copyright (c) Fred Heusschen
  * frebsite.nl
- *
- * License: CC-BY-NC-4.0
- * http://creativecommons.org/licenses/by-nc/4.0/
  */
 
 //	Core
@@ -91,12 +88,12 @@ if (window) {
 }
 
 //	jQuery plugin
-(function($) {
+(function ($) {
     if ($) {
-        $.fn.mmenu = function(options, configs) {
+        $.fn.mmenu = function (options, configs) {
             var $result = $();
 
-            this.each(function(e, element) {
+            this.each(function (e, element) {
                 //	Don't proceed if the element already is a mmenu.
                 if (element.mmApi) {
                     return;
