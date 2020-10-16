@@ -41,7 +41,7 @@
           const mmenuApi = offCanvas.mmApi;
 
           // Open the menu on-click.
-          toggler.addEventListener('click', e => {
+          toggler.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopImmediatePropagation();
             // Check if the menu needs to open or close.

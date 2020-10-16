@@ -234,8 +234,10 @@ function responsive_menu_page_bottom(&$page) {
 function responsive_menu_responsive_menu_off_canvas_tree_alter(array &$menu) {
   // Iterate over the top level of menu items and call the recursive function
   // which adds a unique class to each item and it's children.
-  foreach ($menu['#items'] as &$item) {
-    responsive_menu_off_canvas_add_class($item);
+  if (!empty($menu['#items'])) {
+    foreach ($menu['#items'] as &$item) {
+      responsive_menu_off_canvas_add_class($item);
+    }
   }
 }
 

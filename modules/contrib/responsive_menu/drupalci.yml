@@ -14,6 +14,7 @@ build:
         sniff-all-files: false
         halt-on-fail: false
     testing:
+      # updated for 4.4.x branch. See #3157997
       container_command:
         commands:
           - cd ${SOURCE_DIR}
